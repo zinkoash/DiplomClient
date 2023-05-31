@@ -153,7 +153,6 @@ function StudentsInfo({ student }) {
     };
     return (
         <div>
-            {console.log(practices.practices)}
             {dataSourse ?
                 <div>
                     <Row align={'middle'} justify={'center'} style={{ padding: '2% 0px' }}>
