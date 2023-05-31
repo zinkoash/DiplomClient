@@ -1,6 +1,7 @@
 import axios from 'axios'
 import Cookies from 'universal-cookie';
 
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 const cookies = new Cookies();
 
 const $host = axios.create({
