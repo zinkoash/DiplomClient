@@ -6,6 +6,7 @@ import { useContext } from 'react'
 import { Context } from '../..'
 function Practice() {
     const {practices} = useContext(Context)
+    const dataSource = practices.practices.sort((a,b)=>a.number-b.number)
     
     return (
         <div className='practice__content-container' >
@@ -15,7 +16,7 @@ function Practice() {
             </Row>
             {typeof practices.practices === 'object' ?
             <Row gutter={12} align={'stretch'} justify={'space-around'}  >
-                {practices.practices.map(function (el) {
+                {dataSource.map(function (el) {
                     return (
                         <Col key={el.number} lg={8} sm={8} style={{display:'flex', flexWrap:'wrap', justifyContent:"center", margin:'0 auto'}} >
                             <NavLink to={`./${el.number}`}>{

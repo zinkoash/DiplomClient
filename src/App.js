@@ -10,10 +10,11 @@ import { fetchAllPractice } from './http/practiceAPI';
 import { fetchAllTheory } from './http/theoryAPI';
 import { getStudents } from './http/studentAPI';
 import { fetchAllControl } from './http/controlApi';
+import { fetchAllHelp } from './http/helpAPI';
 
 
 const MyApp =observer(() => {
-  const { user, practices,theoryes,students,controls } = useContext(Context)
+  const { user, practices,theoryes,students,controls,helps } = useContext(Context)
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     async function fetchData() {
@@ -22,6 +23,7 @@ const MyApp =observer(() => {
     const theoryesInfo = (await fetchAllTheory()).data
     const studentsInfo = (await getStudents()).data
     const controlsInfo = (await fetchAllControl()).data
+    const helpsInfo = (await fetchAllHelp()).data
     if (!ignore) {
       user.setUser(userInfo);
       user.setIsAuth(Boolean(userInfo));
@@ -29,6 +31,7 @@ const MyApp =observer(() => {
       theoryes.setTheoryes(theoryesInfo)
       students.setStudents(studentsInfo)
       controls.setControls(controlsInfo)
+      helps.setHelps(helpsInfo)
     }
   }
   let ignore = false;

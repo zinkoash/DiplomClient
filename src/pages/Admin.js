@@ -5,7 +5,6 @@ import AdminTheory from '../components/AdminComponents/AdminTheory';
 import AdminPractice from '../components/AdminComponents/AdminPractice';
 import AdminControl from '../components/AdminComponents/AdminControl';
 import AdminHelp from '../components/AdminComponents/AdminHelp';
-import AdminUsers from '../components/AdminComponents/AdminUsers';
 
 function Admin() {
     const items = [
@@ -29,11 +28,7 @@ function Admin() {
             key:'help',
             children:<AdminHelp/>
         },
-        {
-            label:'Пользователи',
-            key:'users',
-            children:<AdminUsers/>
-        },
+
     ]
     return (
         <>

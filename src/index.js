@@ -9,6 +9,7 @@ import TheoryesStore from './store/TheoryStore';
 import MyApp from './App';
 import StudentsStore from './store/StudentsStore';
 import ControlStore from './store/ControlStore';
+import HelpStore from './store/HelpStore';
 
 export const Context = createContext(null);
 // console.log(process.env.REACT_APP_API_URL);
@@ -30,6 +31,7 @@ root.render(
                 theoryes: new TheoryesStore(),
                 students:new StudentsStore(),
                 controls:new ControlStore(),
+                helps:new HelpStore()
             }
         }>
             <App>

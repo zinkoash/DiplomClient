@@ -8,6 +8,8 @@ import { Context } from '../..';
 
 function Theory() {
     const {theoryes} = useContext(Context)
+    const dataSource = theoryes.theoryes.sort((a,b)=>a.number-b.number)
+
     return (
         <div className='theory__content-container' style={{overflowX:'hidden'}} >
             <Row gutter={16} align={'middle'} justify={'center'}>
@@ -15,7 +17,7 @@ function Theory() {
             </Row>
                 {typeof theoryes.theoryes === 'object' ?
                     <Row gutter={12} align={'stretch'} justify={'space-around'}  >
-                        {theoryes.theoryes.map(function (el) {
+                        {dataSource.map(function (el) {
                             return (
                                 <Col key={el.id} lg={8} sm={8} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: "center", margin: '0 auto' }} >
                                     <NavLink to={`./${el.number}`}>{

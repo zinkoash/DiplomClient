@@ -55,6 +55,9 @@
     width: 95%;
     margin: 0 auto;
 }
+.document__viewer>p{
+    padding: 3px 0px;
+}
 .document__viewer>p>img,.document__viewer>img{
     height: auto;
     width: 100%;

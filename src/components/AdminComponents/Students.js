@@ -150,7 +150,7 @@ function Students({students}) {
             <Table rowSelection={{
                 type: "radio",
                 ...rowSelection
-            }} dataSource={dataSource} columns={columns}>
+            }} scroll={{x:500}} dataSource={dataSource} columns={columns}>
 
             </Table>
             {console.log(selectedRow)}

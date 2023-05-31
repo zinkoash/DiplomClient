@@ -105,7 +105,14 @@ const SendPractice = (props) => {
       title: "Файл",
       dataIndex: "file",
       key: 'fileId',
-      render: (file) =>  <a download target='_blank' href={process.env.REACT_APP_API_URL+'uploads/'+file.folder+'/'+file.fileName} >{file.fileName}</a>
+      render: (file) => (
+        <>
+            {file ?
+                <a download target='_blank' href={process.env.REACT_APP_API_URL + 'uploads/' + file.folder + '/' + file.fileName} >{file.fileName}</a>
+                : 'Без файла'
+            }
+        </>
+    )
     },
     {
       title: "Статус",
