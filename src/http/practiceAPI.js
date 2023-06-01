@@ -15,7 +15,7 @@ export const sendResult = async (formdata) => {
 export const addPractice = async (formdata) => {
     const response = await $host.post('practice/', formdata, {
         headers: {
-            'Content-Type': 'multipart/form-data', // Установите правильный Content-Type
+            'Content-Type': 'multipart/form-data', 
         },
     })
     return response
