@@ -23,7 +23,7 @@ const _Header= observer(() =>{
 
     const { lg, sm, xs } = useBreakpoint();
     const myFontSize = lg ? '24px' : sm ? '16px' : xs ? '12px' : '10px';
-    const title = lg ? 'Электронный практикум по учебному предмету "Математическое моделирование"' : sm ? 'Электронный практикум "Математическое моделирование"' : "ЭММ"
+    const title = lg ? 'ЭУМК "Экономико-математические методы"' : sm ? 'ЭУМК "ЭММ"' : "ЭММ"
     const mySize = lg ? 'large' : sm ? 'midle' : xs ? 'midle' : 'small'
     return (
         <Header className="header" style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: 'rgb(25,33,35)' }}>

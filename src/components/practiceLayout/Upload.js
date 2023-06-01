@@ -50,7 +50,6 @@ const SendPractice = (props) => {
       formData.append('file', file);
     });
     setUploading(true);
-    // You can use any AJAX library you like
     try {
       setConfirmLoading(true);
       patchResFile(user.user.id, props.practice.id ,formData).then((res) => res.json)
@@ -79,7 +78,7 @@ const SendPractice = (props) => {
     },
     beforeUpload: (file) => {
       setFileList([...fileList, file]);
-      return false; // Отменить автоматическую загрузку файла
+      return false; 
     },
     onChange(info) {
       if (info.file.status !== 'uploading') {
