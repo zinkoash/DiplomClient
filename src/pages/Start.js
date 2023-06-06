@@ -40,7 +40,7 @@ const Start = () =>{
                                 type={['bottom', 'top']}
                                 delay={200}
                             >
-                                <Typography.Title style={{ color: 'white' }} level={titleLevel}>ЭКОНОМИКО МАЕМАТИЧЕСКИЕ МЕТОДЫ</Typography.Title>
+                                <Typography.Title style={{ color: 'white' }} level={titleLevel}>ЭКОНОМИКО-МАТЕМАТИЧЕСКИЕ МЕТОДЫ</Typography.Title>
                             </QueueAnim>
                             <TweenOne
                                 animation={{

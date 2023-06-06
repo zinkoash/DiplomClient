@@ -74,11 +74,11 @@ function StudentsInfo({ student }) {
             key: 'action',
             render: (record) => (
                 <>
-                    {console.log(record)}
                     <Button onClick={showModal}>Изменить результат работы</Button>
                     <Modal
                         title="Изменить результат работы"
                         open={open}
+                        record={record}
                         onCancel={handleCancel}
                         footer={[
                             <Button key="back" onClick={handleCancel}>
@@ -90,7 +90,8 @@ function StudentsInfo({ student }) {
                                 Изменить
                             </Button>,
                         ]}
-                    >
+                        >
+                        {console.log(record)}
                         <Form form={form} layout="vertical">
                             <Form.Item
                                 initialValue={record.status}

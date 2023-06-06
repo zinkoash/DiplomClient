@@ -4,8 +4,8 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { Button, Form, Input, App} from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { check, registration } from '../../http/userAPI';
-import { setCookie } from 'nookies';
 import { useContext } from 'react';
+import Cookies from 'universal-cookie';
 import { Context } from '../..';
 
 
@@ -33,6 +33,7 @@ const navigate = useNavigate();
 const { notification } = App.useApp();
 const {user} = useContext(Context)
 
+const cookies = new Cookies();
 const onFinish = async (values) => {
     try {
         const {token} = await registration(values);
@@ -41,7 +42,7 @@ const onFinish = async (values) => {
             description: 'Регистрация прошла успешно',
             duration:4
         })
-        setCookie(null, "_token", token, {
+        cookies.set("_token", token, {
             path:'/'
         })
         check().then(data => {

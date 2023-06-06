@@ -5,7 +5,10 @@ function FileEditor() {
     const editorRef = useRef(null);
     const log = () => {
         if (editorRef.current) {
-            console.log(editorRef.current.getContent());
+            const content = editorRef.current.getContent();
+            console.log(content);
+            const blob = new Blob([content], { type: 'text/plain' });
+            console.log(blob);
         }
     };
     return (

@@ -14,6 +14,7 @@ import { Context } from '..';
 import TheoryPage from '../pages/TheoryPage';
 import { observer } from 'mobx-react-lite';
 import Admin from '../pages/Admin';
+import Editor from '../pages/Editor';
 
 
 
@@ -32,6 +33,7 @@ const AppRouter = ()=> {
                 <Route path='theory/:theoryNumber' element={<TheoryPage />} />
                 <Route path='help' element={<Help />} />
                 <Route path='control' element={<Control />} />
+                <Route path='editor' element={<Editor/>}/>
             </Route>
             <Route>
                 {

@@ -154,6 +154,8 @@ function AdminTheory() {
             title: "Описание",
             dataIndex: "description",
             key: 'description',
+            ...getColumnSearchProps('description')
+
         },
     ]
     const rowSelection = {
@@ -226,7 +228,7 @@ function AdminTheory() {
             }).then(()=>{
                 notification.success({
                     message: 'Успешно',
-                    description: `$Теория добавлена!`,
+                    description: `Теория добавлена!`,
                     duration:4
                 })
             })
@@ -235,7 +237,7 @@ function AdminTheory() {
         } catch (err) {
             notification.error({
                 message: 'Ошибка',
-                description: `${err.message?err.message:'Неизвестная ошибка'}!`,
+                description: `${err.response.data.message?err.response.data.message:'Неизвестная ошибка'}!`,
                 duration:4
             })
         }
