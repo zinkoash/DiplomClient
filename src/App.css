@@ -58,10 +58,7 @@
 .document__viewer>p{
     padding: 3px 0px;
 }
-.document__viewer>p>img,.document__viewer>img{
-    height: auto;
-    width: 100%;
-}
+
 .document__viewer>TABLE {
     border-collapse: collapse;
     border: 1px solid grey; /* Убираем двойные линии между ячейками */
@@ -175,7 +172,17 @@
         padding: 0 25px;
     }
 }
+.document__viewer>p>img,.document__viewer>img{
+    height: auto;
+    width: 100%;
+    max-width: 600px;
+}
 @media (max-width: 487px) {
+
+    .document__viewer>p>img,.document__viewer>img{
+        height: auto;
+        width: 100%;
+    }
 
     .content-container{
         padding: 0;
