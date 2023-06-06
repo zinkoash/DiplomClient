@@ -42,7 +42,7 @@ const TheoryPage = () => {
                 <Row gutter={16} style={{ padding: '0 2%' }} align={'middle'} justify={'space-between'}>
                     <LeftOutlined style={{ fontSize: 20 }} onClick={() => { navigate('../theory') }} />
                     <Typography.Title level={3}>{theory.theory.name}</Typography.Title>
-                    <a href={theory.theoryUrl} download>
+                    <a href={process.env.REACT_APP_API_URL+ 'uploads/' + theory.theory.file.folder + '/' + theory.theory.file.fileName} target='_blank' download>
                         <DownloadOutlined style={{ fontSize: 20 }} /></a>
                 </Row>
                 <div className='theory__content-container' style={{ minHeight: '100vh' }}>
