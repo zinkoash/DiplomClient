@@ -167,7 +167,7 @@ function StudentsInfo({ student }) {
                                     size={
                                         200
                                     }
-                                    percent={(dataSourse.length * 100) / practices.practices.length}
+                                    percent={((dataSourse.length * 100) / practices.practices.length).toFixed(2)}
                                     success={{
                                         percent: (dataSourse.filter(({ status }) => status == 'Сдано').length * 100) / practices.practices.length,
                                     }}

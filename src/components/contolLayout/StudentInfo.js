@@ -66,7 +66,7 @@ function StudentInfo() {
                                     size={
                                         200
                                     }
-                                    percent={(student.results.length*100)/ practices.practices.length}
+                                    percent={((student.results.length*100)/ practices.practices.length).toFixed(2)}
                                     success={{
                                         percent: (student.results.filter(({status})=>status=='Сдано').length*100)/practices.practices.length,
                                     }}
